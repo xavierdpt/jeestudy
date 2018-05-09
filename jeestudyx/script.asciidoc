@@ -1,0 +1,73 @@
+== Java EE Study #1 : Java EE Web Project, Eclipse, Maven, Tomcat, Windows ==
+
+Hi guys ! In this video, we set up a Maven Java EE Web Project in Eclipse on Windows and deploy it on Tomcat.
+
+This document contains theory, practice and discussion parts. Please use the pause button of your video player to read the theory and discussion parts at your leisure.
+
+=== Installation of the Java Development Kit ===
+
+*Some practice*
+
+Search for `jdk` on the web.
+
+Download `jdk-8u172-windows-x64.exe`.
+
+In the feature selection screen, disable the Public JRE.
+
+Done.
+
+*Some discussion*
+
+It seems that the Java ecosystem needs some time to adapt to version 9 and 10 of Java.
+
+=== Installation of Eclipse ===
+
+*Some practice*
+
+Search for `eclipse` on the web.
+
+You should end up on the x64 installer that should.
+
+On the first execution, update the installer.
+
+Then select the Java EE eclipse installation.
+
+Done.
+
+=== Installation of Tomcat ===
+
+*Some practice*
+
+Look for `tomcat` on the web.
+
+Get Tomcat 8.5 64-bit Windows zip archive.
+
+Copy the content of this archive to the location of your choice.
+
+Done.
+
+*Some discussion*
+
+
+=== Conclusion ===
+
+In this video, you saw how to inspect HTTP headers on servlet requests and how to inspect and set HTTP headers on servlet responses.
+
+We also saw that the mechanisms to parse dates and integers are dangerous, but quite useful for dates.
+
+And we discovered that some responses contains the `Content-Length` header when the payload is small and the `Transfer-Encoding` header with value `chunked` when the payload is large.
+
+As a general feeling, the Servlet API for manipulating headers fells quite inconsistent and contains some gotchas, especially the problem that it is not possible to clear a response header correctly.
+
+I hope that you found the information presented useful.
+
+That's all folks.
+
+++++
+<!--
+<script>document.body.contentEditable=true</script>
+-->
+<style>
+::selection { background:PeachPuff; color:black;}
+</style>
+++++

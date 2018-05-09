@@ -1,1 +1,126 @@
-<p>This page is empty</p>
+<h2>JEE Study #2 : Java EE specifications, Maven and application servers</h2>
+
+<p>Hi guys !</p>
+
+<p>In this video, we describe the relationships between Java EE specifications, Maven dependencies and application servers.</p>
+
+<h3>Java Specification Requests (JSRs)</h3>
+
+<p>
+    <strong>Some theory</strong>
+</p>
+
+<p>The fundamental unit in Java EE is the Java Specification Request (JSR).</p>
+
+<p>For example, Servlet 3.1 in Java EE 7 is specified in JSR 340, and Servlet 4.0 in Java EE 8 is specified in JSR 4.0.</p>
+
+<p>A very informative document is Wikipedia article
+    <a href="https://en.wikipedia.org/wiki/Java_EE_version_history" target="_blank">Java EE version history</a>.</p>
+
+<p>
+    <strong>Some practice</strong>
+</p>
+
+<p>Let's use the Java EE version history article to open the Servlet 4.0 specification.</p>
+
+<p>The steps involve finding the the link, and opening the PDF.</p>
+
+<p>Depending on JSRs, some other documents, such as a javadoc archive for the case of Servlet, may be available.</p>
+
+<h3>Java EE specifications and profiles</h3>
+
+<p>
+    <strong>Some theory</strong>
+</p>
+
+<p>Java EE 6 is specified in JSR 316, Java EE 7 is specified in JSR 342 and Java EE 8 is specified in JSR 366.</p>
+
+<p>Each of these documents specifies which other JSRs are to be included, and how they must interact with each other.</p>
+
+<p>All Java EE versions define two profiles.</p>
+
+<p>The full profile includes everything.</p>
+
+<p>The web profile includes only a subset of the Java EE specifications.</p>
+
+<p>
+    <strong>Some practice</strong>
+</p>
+
+<p>Let's open the Java EE 8 full profile specification and check that it includes the Servlet 4.0 specification</p>
+
+<p>Let's check that it is also the case for the web profile specification.</p>
+
+<h3>Java EE specification and Maven dependencies</h3>
+
+<p>
+    <strong>Some theory</strong>
+</p>
+
+<p>Software created for Java EE is supposed to be application server agnostic.</p>
+
+<p>But some classes must still be injected in the IDE classpath for autocompletion purposes.</p>
+
+<p>To solve this issue, Maven dependcies can be annotated with the
+    <code>provided</code> scope, so that the corresponding JARs are available during code authoring and compilation, but not included in the final
+    artifact.
+</p>
+
+<p>Maven dependencies for Java EE are available in Maven central for these purposes, under the artifact ids
+    <code>javaee-api</code> or
+    <code>javaee-web-api</code>.</p>
+
+<p>Other JSRs are references as dependencies, and can be included individually.</p>
+
+<p>
+    <strong>Some practice</strong>
+</p>
+
+<p>A good place to search for maven dependencies is
+    <a href="//mvnrepository.com">mvnrepository.com</a>.</p>
+
+<p>Let's suppose we are targetting Java EE 8 full profile. Then we need to search for
+    <code>javaee-api</code>, from which we select version 8.0.
+</p>
+
+<p>If we were targetting the Java EE 7 web profile, we would search for
+    <code>javaee-web-api</code> and select version 7.0.</p>
+
+<p>Let's suppose we want to include only the Servlet JSR for Java EE 7. Then we can inspect the compile depencies of
+    <code>>javaee-api</code> to select just that.</p>
+
+<h3>Java EE application servers</h3>
+
+<p>
+    <strong>Some theory</strong>
+</p>
+
+<p>
+    <a href="http://www.oracle.com/technetwork/java/javaee/downloads/index.html" target="_blank">GlassFish</a> is the reference Java EE implementation. It supports both the web profile and the full profile.</p>
+
+<p>Other full profile implementations include
+    <a href="http://www.oracle.com/technetwork/middleware/weblogic/overview/index.html" target="_blank">Oracle WebLogic</a> and
+    <a href="https://www.ibm.com/cloud/websphere-application-platform" target="_blank">IBM WebSphere</a>.
+</p>
+
+<p>Some other application servers, such as
+    <a href="http://tomcat.apache.org/" target="_blank">Apache Tomcat</a> only include a subset of the Java EE JSRs. In these case, it is necessary to include the corresponding
+    Maven dependencies manually.</p>
+
+<p>
+    <strong>Some practice</strong>
+</p>
+
+<p>We will have ample practice with application servers in the coming video, but we won't cover all of them.</p>
+
+<p>According to
+    <a href="https://en.wikipedia.org/wiki/List_of_application_servers#Java" target="_blank">Wikipedia</a>, there are a number of them.</p>
+
+<h3>Conclusion</h3>
+
+<p>In this video, we introduced Java EE specification requests, Java EE versions, and their relations with Maven dependencies
+    and application servers.</p>
+
+<p>Don't forget to like if you found the information presented useful.</p>
+
+<p>That's all for now, stay tuned.</p>
