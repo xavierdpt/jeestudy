@@ -1,192 +1,118 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <style>
+    body {
+      color: #495057;
+    }
 
-    <title>JEE Study</title>
-  </head>
-  <body>
-  <div class="sect1 data-line-1">
-    <h2 id="_jeestudy_1_java_8_and_eclipse_oxygen_setup_on_windows_10">JeeStudy #1 : Java 8 and Eclipse Oxygen Setup on Windows 10</h2>
-    <div class="sectionbody">
-        <div class="paragraph data-line-3">
-            <p>Hi guys !</p>
-        </div>
-        <div class="paragraph data-line-5">
-            <p>In this video, we install the Java 8 Development Kit and Eclipse Oxygen on Windows 10.</p>
-        </div>
-        <div class="sect2 data-line-7">
-            <h3 id="_java">Java</h3>
-            <div class="paragraph data-line-9">
-                <p>
-                    <strong>Some practice</strong>
-                </p>
-            </div>
-            <div class="paragraph data-line-11">
-                <p>Look for
-                    <code>jdk</code> on the web.</p>
-            </div>
-            <div class="paragraph data-line-13">
-                <p>Get the file
-                    <code>jdk-8u172-windows-x64.exe</code>.</p>
-            </div>
-            <div class="paragraph data-line-15">
-                <p>During installation, make sure the "Public JRE" is not selected.</p>
-            </div>
-            <div class="paragraph data-line-17">
-                <p>Done.</p>
-            </div>
-            <div class="paragraph data-line-19">
-                <p>
-                    <strong>Some discussion</strong>
-                </p>
-            </div>
-            <div class="paragraph data-line-21">
-                <p>We use the version 8 of the JDK because the Java ecosystem is still adapting to versions 9 and 10 of Java.</p>
-            </div>
-            <div class="paragraph data-line-23">
-                <p>We disable the Public JRE because a "private" JRE already exists within the JDK, and having both a public
-                    and a private JRE can become very confusing at times.</p>
-            </div>
-        </div>
-        <div class="sect2 data-line-25">
-            <h3 id="_eclipse">Eclipse</h3>
-            <div class="paragraph data-line-27">
-                <p>Look for
-                    <code>eclipse</code> on the web.</p>
-            </div>
-            <div class="paragraph data-line-29">
-                <p>You should end up with the Windows x64 installer.</p>
-            </div>
-            <div class="paragraph data-line-31">
-                <p>Upon first execution, update the installer.</p>
-            </div>
-            <div class="paragraph data-line-33">
-                <p>Then choose the Eclipse IDE for Java EE Developer in the list.</p>
-            </div>
-            <div class="paragraph data-line-35">
-                <p>Done.</p>
-            </div>
-        </div>
-        <div class="sect2 data-line-37">
-            <h3 id="_sample_maven_project">Sample maven project</h3>
-            <div class="paragraph data-line-39">
-                <p>
-                    <strong>Some practice</strong>
-                </p>
-            </div>
-            <div class="paragraph data-line-41">
-                <p>Start the "new maven project".</p>
-            </div>
-            <div class="paragraph data-line-43">
-                <p>Make sure "Create a simple project" is checked.</p>
-            </div>
-            <div class="paragraph data-line-45">
-                <p>You can choose to put the project files in a location external to the workspace.</p>
-            </div>
-            <div class="paragraph data-line-47">
-                <p>In the next page, enter the following information:</p>
-            </div>
-            <div class="ulist data-line-49">
-                <ul>
-                    <li>
-                        <p>Group Id :
-                            <code>example.company</code>
-                        </p>
-                    </li>
-                    <li>
-                        <p>Artifact Id :
-                            <code>myproject</code>
-                        </p>
-                    </li>
-                    <li>
-                        <p>Version :
-                            <code>0.0.0</code>
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div class="paragraph data-line-53">
-                <p>Click on "Finish".</p>
-            </div>
-            <div class="paragraph data-line-55">
-                <p>Create a new class
-                    <code>example.company.myproject.M</code>
-                </p>
-            </div>
-            <div class="paragraph data-line-57">
-                <p>Add a main method which says "Hello World !"</p>
-            </div>
-            <div class="paragraph data-line-59">
-                <p>Run it.</p>
-            </div>
-            <div class="paragraph data-line-61">
-                <p>
-                    <strong>Some discussion</strong>
-                </p>
-            </div>
-            <div class="ulist data-line-63">
-                <ul>
-                    <li>
-                        <p>About versioning</p>
-                        <div class="paragraph data-line-65">
-                            <p>Versioning should follow the major/minor/patch scheme, with possibly an additional hyphen followed
-                                by some kind of tag or versioned suffix.</p>
-                        </div>
-                        <div class="paragraph data-line-67">
-                            <p>Also, the major version should remain 0 as long as the artefact is not ready for release.</p>
-                        </div>
-                        <div class="paragraph data-line-69">
-                            <p>And version numbers should keep increasing for each new version.</p>
-                        </div>
-                        <div class="paragraph data-line-71">
-                            <p>Apart from these general soft rules, the way versioning is done is quite unconstrained.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <p>About artifact ids</p>
-                        <div class="paragraph data-line-74">
-                            <p>Artifact id should be all lowercase, with each part separated by hyphens.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <p>About group ids The most difficult part is often choosing the group id. It must be unique and must
-                            usually be URL identifying the organization in which the project lives.</p>
-                        <div class="paragraph data-line-78">
-                            <p>Fortunately, RFC 6761 reserves the
-                                <code>example</code> top level domain for examples. This is why all projects in this series will live under the
-                                completely generic
-                                <code>example.company</code> group id.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <p>Eclipse project structure and Maven</p>
-                        <div class="paragraph data-line-81">
-                            <p>When a maven project is imported into Eclipse, the following files and directories are created:
-                                <code>.settings</code>,
-                                <code>target</code>,
-                                <code>.classpath</code> and
-                                <code>.project</code>.</p>
-                        </div>
-                        <div class="paragraph data-line-83">
-                            <p>These files caches some information from the
-                                <code>pom.xml</code> and are not always updated when the
-                                <code>pom.xml</code> is modified in ways that change the nature of the project. In these situations, it is better
-                                to delete the project from eclipse (but keep the files !), delete the Eclipse specific files,
-                                then import the project again.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-  </body>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #2FA4E7;
+    }
+  </style>
+  <title>JEE Study</title>
+</head>
+
+<body>
+  <div class="container"><h1>JEE Study #1 : Java and Eclipse Setup on Windows 10</h1>
+<p>Hi guys !</p>
+<p>In this video, we install the Java 8 Development Kit and Eclipse Oxygen on Windows 10.</p>
+<h2>Java</h2>
+<p>
+    <strong>Some practice</strong>
+</p>
+<p>Look for
+    <code>jdk</code> on the web.</p>
+<p>Get the file
+    <code>jdk-8u172-windows-x64.exe</code>.</p>
+<p>During installation, make sure the "Public JRE" is not selected.</p>
+<p>Done.</p>
+<p>
+    <strong>Some discussion</strong>
+</p>
+<p>We use the version 8 of the JDK because the Java ecosystem is still adapting to versions 9 and 10 of Java.</p>
+<p>We disable the Public JRE because a "private" JRE already exists within the JDK, and having both a public and a private JRE
+    can become very confusing at times.</p>
+<h3>Eclipse</h3>
+<p>Look for
+    <code>eclipse</code> on the web.</p>
+<p>You should end up with the Windows x64 installer.</p>
+<p>Upon first execution, update the installer.</p>
+<p>Then choose the Eclipse IDE for Java EE Developer in the list.</p>
+<p>Done.</p>
+<h3>Sample maven project</h3>
+<p>
+    <strong>Some practice</strong>
+</p>
+<p>Start the "new maven project" wizard.</p>
+<p>Make sure "Create a simple project" is checked.</p>
+<p>You can choose to put the project files in a location external to the workspace.</p>
+<p>In the next page, enter the following information:</p>
+<ul>
+    <li>
+        <p>Group Id :
+            <code>example.company</code>
+        </p>
+    </li>
+    <li>
+        <p>Artifact Id :
+            <code>myproject</code>
+        </p>
+    </li>
+    <li>
+        <p>Version :
+            <code>0.0.0</code>
+        </p>
+    </li>
+</ul>
+<p>Click on "Finish".</p>
+<p>Create a new class
+    <code>example.company.myproject.M</code>
+</p>
+<p>Add a main method which says "Hello World !"</p>
+<p>Run it.</p>
+<p>
+    <strong>Some discussion</strong>
+</p>
+<ul>
+    <li>
+        <p>About the artifact id, group id, and version</p>
+        <p>RFC 6761 reserves the
+            <code>example</code> top level domain for examples.</p>
+        <p>We use this to make our projects live under the
+            <code>company.example</code> fictitious websites.</p>
+        <p>We use version
+            <code>0.0.0</code> to denote the fact that our projects are not versioned at all..</p>
+    </li>
+    <li>
+        <p>Eclipse project structure and Maven</p>
+        <p>When a maven project is imported into Eclipse, the following files and directories are created:
+            <code>.settings</code>,
+            <code>target</code>,
+            <code>.classpath</code> and
+            <code>.project</code>.</p>
+        <p>These files caches some information from the
+            <code>pom.xml</code> and are not always updated when the
+            <code>pom.xml</code> is modified. When these situations happens, it is sometimese required to delete the project from eclipse (but
+            keep the files !), delete the Eclipse specific files, then import the project again.</p>
+    </li>
+</ul></div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+  crossorigin="anonymous"></script>
+</body>
+
 </html>
