@@ -1,0 +1,83 @@
+== JeeStudy #1 : Java 8 and Eclipse Oxygen Setup on Windows 10 ==
+
+Hi guys !
+
+In this video, we install the Java 8 Development Kit and Eclipse Oxygen on Windows 10.
+
+=== Java ===
+
+*Some practice*
+
+Look for `jdk` on the web.
+
+Get the file `jdk-8u172-windows-x64.exe`.
+
+During installation, make sure the "Public JRE" is not selected.
+
+Done.
+
+*Some discussion*
+
+We use the version 8 of the JDK because the Java ecosystem is still adapting to versions 9 and 10 of Java.
+
+We disable the Public JRE because a "private" JRE already exists within the JDK, and having both a public and a private JRE can become very confusing at times.
+
+=== Eclipse ===
+
+Look for `eclipse` on the web.
+
+You should end up with the Windows x64 installer.
+
+Upon first execution, update the installer.
+
+Then choose the Eclipse IDE for Java EE Developer in the list.
+
+Done.
+
+=== Sample maven project ===
+
+*Some practice*
+
+Start the "new maven project".
+
+Make sure "Create a simple project" is checked.
+
+You can choose to put the project files in a location external to the workspace.
+
+In the next page, enter the following information:
+
+* Group Id : `example.company`
+* Artifact Id : `myproject`
+* Version : `0.0.0`
+
+Click on "Finish".
+
+Create a new class `example.company.myproject.M`
+
+Add a main method which says "Hello World !"
+
+Run it.
+
+*Some discussion*
+
+* About versioning
++
+Versioning should follow the major/minor/patch scheme, with possibly an additional hyphen followed by some kind of tag or versioned suffix.
++
+Also, the major version should remain 0 as long as the artefact is not ready for release.
++
+And version numbers should keep increasing for each new version.
++
+Apart from these general soft rules, the way versioning is done is quite unconstrained.
+* About artifact ids
++
+Artifact id should be all lowercase, with each part separated by hyphens.
+* About group ids
+The most difficult part is often choosing the group id. It must be unique and must usually be URL identifying the organization in which the project lives.
++
+Fortunately, RFC 6761 reserves the `example` top level domain for examples. This is why all projects in this series will live under the completely generic `example.company` group id.
+* Eclipse project structure and Maven
++
+When a maven project is imported into Eclipse, the following files and directories are created: `.settings`, `target`, `.classpath` and `.project`.
++
+These files caches some information from the `pom.xml` and are not always updated when the `pom.xml` is modified in ways that change the nature of the project. In these situations, it is better to delete the project from eclipse (but keep the files !), delete the Eclipse specific files, then import the project again.
