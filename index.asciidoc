@@ -1,5 +1,0 @@
-== JeeStudy ==
-
-Welcome to the JeeStudy GitHub repository.
-
-* http://xavierdpt.github.io/jeestudy/jeestudy1/[JeeStudy #1 : Java and Eclipse Setup on Windows 10]
