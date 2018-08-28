@@ -1,25 +1,69 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "JEE Study #1: Java and Eclipse Setup on Windows 10"
 date:   2018-08-28 17:19:35 +0200
-categories: jekyll update
+categories: jee servlets
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Hi guys !
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+In this session, we install the Java 10 Development Kit (JDK) and Eclipse Photon on Windows 10. The JDK is necessary for developing Java EE applications, and Eclipse is one popular Java IDE.
 
-Jekyll also offers powerful support for code snippets:
+# Java
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+**Some practice**
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Look for `Java Development Kit 10` on the web.
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Get the file `?`.
+
+During installation, I usually omit the "Public JRE", which is not strictly necessary.
+
+Done.
+
+**Some discussion**
+
+The reason why I usually omit the "Public JRE" is because I ran into cases where the "Public JRE" updated itself, while the JDK remained on the same version. This lead to very confusing issues, where different pieces of software where using different version of almost the same thing. Disabling the Public JRE and using only one JDK ensures that everything is using the same version of Java.
+
+# Eclipse
+
+**Some practice**
+
+Look for `eclipse` on the web.
+
+You should end up with the Windows x64 Installer.
+
+Upon first execution, you may have to update the installer.
+
+The choose the "Eclipse IDE for Java EE Developer" in the list.
+
+Done.
+
+# Sample maven project
+
+**Some practice**
+
+Start the "new maven project" wizard.
+
+Make sure "Create a simple project" is checked.
+
+You can choose to put the project files in a location external to the workspace.
+
+In the next page of the wizard, enter the following information:
+
+* Group Id : `example.company`
+* Artifact Id : `myproject`
+* Version : `0.0.0`
+
+Click on "Finish".
+
+Create a new class named `example.company.myproject.Main`.
+
+Add a main method which outputs "Hello Word !" to the console.
+
+Run it.
+
+**Some discussion**
+
+RFC 6761 reserves the `example` top level domain name for examples. We use this to make the projects in this serie live in the fictitious `company.example` website. We also use version `0.0.0` everywhere to denote the fact that the projects in this serie are not versioned at all.
+
+Eclipse adds the `.settings`, `target`, `.classpath` and `.project` to Maven projects, and these files cache information derived from the `pom.xml`. Some changes to `pom.xml` thus require removing the project from eclipse, then removing these files, and importing the project into Eclipse again to have the changes be taken into account.
